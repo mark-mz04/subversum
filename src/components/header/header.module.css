@@ -1,0 +1,107 @@
+.container {
+	padding: 50px 0 160px;
+	background-image: url(/src/img/headerBgr.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.navContainer {
+	margin: 0 0 180px;
+	padding: 0 35px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navContainerLeft {
+	display: flex;
+}
+
+.btnPlay {
+	margin: 8px 0;
+	padding: 4px 10px;
+	font-size: 24px;
+	line-height: 22px;
+	background-color: #ffffff;
+	border-radius: 28px;
+}
+
+.btnMenu {
+	margin: 8px 0 8px 20px;
+	padding: 4px 70px 4px 10px;
+	position: relative;
+}
+
+#menuToggle {
+	display: none;
+}
+
+.menuToggleLabel {
+	position: absolute;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.burgerMenu,
+.burgerMenu::before,
+.burgerMenu::after {
+	display: block;
+	background-color: #13424b;
+	/* position: absolute; */
+	height: 4px;
+	width: 30px;
+	transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+	border-radius: 2px;
+}
+.burgerMenu {
+	margin: 0 15px 0 0;
+}
+.burgerMenu::before {
+	content: '';
+	margin-top: -8px;
+}
+.burgerMenu::after {
+	content: '';
+	margin-top: 12px;
+}
+
+#menuToggle:checked + .menuToggleLabel .burgerMenu::before {
+	margin-top: 0px;
+	transform: rotate(405deg);
+}
+#menuToggle:checked + .menuToggleLabel .burgerMenu {
+	background: #ffffff;
+}
+#menuToggle:checked + .menuToggleLabel .burgerMenu::after {
+	margin-top: -4px;
+	transform: rotate(-405deg);
+}
+
+.content {
+	padding: 0 170px;
+	max-width: 450px;
+	color: #ffffff;
+}
+
+.text {
+	margin: 40px 0 0;
+	font-size: 40px;
+	line-height: 57px;
+}
+
+.bgrBtm {
+	width: 100vw;
+	height: 20vw;
+	background-image: url(/src/img/headerBgrBtm.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

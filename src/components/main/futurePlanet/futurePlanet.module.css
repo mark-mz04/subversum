@@ -1,0 +1,19 @@
+.info {
+	position: absolute;
+	width: 40vw;
+	top: 10.5vw;
+	left: 8.5vw;
+}
+
+.subtitle {
+	margin: 0 0 5vw;
+	font-size: 2vw;
+	line-height: 3vw;
+}
+
+.btmText {
+	position: absolute;
+	width: 40vw;
+	bottom: 11vw;
+	right: 10.5vw;
+}
