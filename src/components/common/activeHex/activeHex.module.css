@@ -1,0 +1,15 @@
+.click,
+.darkText {
+	position: absolute;
+	margin: 0;
+	width: 9vw;
+	text-align: center;
+	cursor: pointer;
+}
+
+.darkText {
+	width: 28vw;
+	font-size: 0.9vw;
+	line-height: 1.05vw;
+	letter-spacing: -0.005em;
+}

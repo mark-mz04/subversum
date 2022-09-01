@@ -16,8 +16,8 @@ body {
 	width: 100vw;
 	color: #13424b;
 	font-family: 'Michroma-Regular', 'Montserrat';
-	font-size: 27px;
-	line-height: 30px;
+	font-size: 1.25vw;
+	line-height: 1.5vw;
 	letter-spacing: 0.12em;
 	background: linear-gradient(
 		180deg,
@@ -41,12 +41,25 @@ button {
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
-	/* max-width: 1920px; */
+}
+
+.title {
+	margin: 0;
+	font-weight: 400;
+	font-size: 2.2vw;
+	line-height: 3vw;
+}
+
+.subtitle {
+	margin: 0 0 4.5vw;
+	font-weight: 400;
+	font-size: 2vw;
+	line-height: 3vw;
 }
 
 .text {
 	margin: 0;
 	font-family: 'Monda-Regular', 'Montserrat';
 	font-size: 1.25vw;
-	line-height: 2.5vw;
+	line-height: 2.35vw;
 }

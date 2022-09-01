@@ -1,36 +1,88 @@
 import s from './header.module.css';
-import userMenuLogo from '../../img/userMenuLogo.svg';
+import userMenuLogo from '../../img/mainPage/header/userMenuLogo.svg';
 import logo from '../../img/logo.svg';
+import { WhiteBtn } from '../common/whiteBtn/whiteBtn';
+import { useRef, useState } from 'react';
+import { Transition } from 'react-spring/renderprops';
 
 export const Header = () => {
+	const menuToggle = useRef();
+
+	const [openMenu, setOpenMenu] = useState(false);
+	const [openUserMenu, setOpenUserMenu] = useState(false);
+
+	const handlerClickMenu = () => {
+		setOpenMenu(!openMenu);
+		setOpenUserMenu(false);
+	};
+	const handlerClickUserMenu = () => {
+		menuToggle.current.checked = false;
+		setOpenMenu(false);
+		setOpenUserMenu(!openUserMenu);
+	};
+
 	return (
 		<header className={s.container}>
 			<div className={s.navContainer}>
 				<div className={s.navContainerLeft}>
-					<button className={s.btnPlay}>PLAY</button>
+					<WhiteBtn text={'PLAY'} />
 
-					<div className={`${s.btnPlay} ${s.btnMenu}`}>
+					<div className={`${s.btnMenu}`}>
 						MENU
-						<input id={s.menuToggle} type='checkbox' />
-						<label className={s.menuToggleLabel} htmlFor={s.menuToggle}>
-							<div className={s.burgerMenu}></div>
-						</label>
-						{/* <nav>
-							<a>Learn</a>
-							<a>NFT List</a>
-							<a>Community</a>
-							<a>Key numbers</a>
-							<a>Events</a>
-						</nav> */}
+						<input ref={menuToggle} id={s.menuToggle} type='checkbox' />
+						<label
+							className={s.menuToggleLabel}
+							htmlFor={s.menuToggle}
+							onClick={() => handlerClickMenu()}
+						/>
+						<div className={s.burgerMenu}></div>
+						<Transition
+							items={openMenu}
+							from={{ width: 0 }}
+							enter={{ width: 'auto' }}
+							leave={{ width: 0 }}
+							config={{ duration: 400 }}>
+							{(open) =>
+								open &&
+								((style) => (
+									<nav style={style} className={`${s.navigation}`}>
+										<a className={s.navigationItem}>Learn</a>
+										<a className={s.navigationItem}>NFT List</a>
+										<a className={s.navigationItem}>Community</a>
+										<a className={s.navigationItem}>Key numbers</a>
+										<a className={s.navigationItem}>Events</a>
+									</nav>
+								))
+							}
+						</Transition>
 					</div>
 				</div>
 
-				<nav>
-					<img src={`${userMenuLogo}`} />
-					{/* <a>My NFT</a>
-					<a>Wallet</a>
-					<a>Account</a> */}
-				</nav>
+				<div className={s.userMenuContainer}>
+					<Transition
+						items={openUserMenu}
+						from={{ width: 0 }}
+						enter={{ width: 'auto' }}
+						leave={{ width: 0 }}
+						config={{ duration: 400 }}>
+						{(open) =>
+							open &&
+							((style) => (
+								<nav style={style} className={s.userMenu}>
+									<a className={s.navigationItem}>My NFT</a>
+									<a className={s.navigationItem}>Wallet</a>
+									<a className={s.navigationItem}>Account</a>
+								</nav>
+							))
+						}
+					</Transition>
+
+					<img
+						src={`${userMenuLogo}`}
+						className={s.userMenuLogo}
+						onClick={() => handlerClickUserMenu()}
+					/>
+				</div>
 			</div>
 
 			<div className={s.content}>
