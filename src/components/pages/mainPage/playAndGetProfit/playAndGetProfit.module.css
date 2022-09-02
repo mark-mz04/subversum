@@ -26,6 +26,11 @@
 	right: 13.5vw;
 }
 
+.sevenPositionImg {
+	top: 16.5vw;
+	right: 18vw;
+}
+
 .btmText {
 	position: absolute;
 	width: 54vw;
@@ -46,4 +51,9 @@
 .threePositionText {
 	bottom: 12vw;
 	left: 13.5vw;
+}
+
+.threePositionImg {
+	bottom: 24vw;
+	left: 1.5vw;
 }

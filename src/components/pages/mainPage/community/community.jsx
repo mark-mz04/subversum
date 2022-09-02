@@ -2,6 +2,7 @@ import { HexTwoRows } from '../../../common/hexTwoRows/hexTwoRows';
 import s from './community.module.css';
 import { useState } from 'react';
 import { ActiveHex } from '../../../common/activeHex/activeHex';
+import home from '../../../../img/mainPage/home.png';
 
 export const Community = () => {
 	const [whiteSeven, setWhiteSeven] = useState('white');
@@ -155,6 +156,8 @@ export const Community = () => {
 					positionTextClick={s.sevenPositionTextClick}
 					positionTextMore={s.sevenPositionTextMore}
 					positionText={s.sevenPositionText}
+					imgSrc={home}
+					positionImg={s.sevenPositionImg}
 					learnMoreState={sevenLearnMore}
 					clickTextClick={clickSevenHex}
 					clickTextMore={clickSevenLearnMore}

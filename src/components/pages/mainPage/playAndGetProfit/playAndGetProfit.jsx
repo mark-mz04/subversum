@@ -2,6 +2,7 @@ import { HexTwoRows } from '../../../common/hexTwoRows/hexTwoRows';
 import s from './playAndGetProfit.module.css';
 import { useState } from 'react';
 import { ActiveHex } from '../../../common/activeHex/activeHex';
+import home from '../../../../img/mainPage/home.png';
 
 export const PlayAndGetProfit = () => {
 	const [whiteSeven, setWhiteSeven] = useState('white');
@@ -222,6 +223,8 @@ export const PlayAndGetProfit = () => {
 					positionTextClick={s.sevenPositionTextClick}
 					positionTextMore={s.sevenPositionTextMore}
 					positionText={s.sevenPositionText}
+					imgSrc={home}
+					positionImg={s.sevenPositionImg}
 					learnMoreState={sevenLearnMore}
 					clickTextClick={clickSevenHex}
 					clickTextMore={clickSevenLearnMore}
@@ -254,6 +257,8 @@ export const PlayAndGetProfit = () => {
 					positionTextClick={s.threePositionTextClick}
 					positionTextMore={s.threePositionTextMore}
 					positionText={s.threePositionText}
+					imgSrc={home}
+					positionImg={s.threePositionImg}
 					learnMoreState={threeLearnMore}
 					clickTextClick={clickThreeHex}
 					clickTextMore={clickThreeLearnMore}
