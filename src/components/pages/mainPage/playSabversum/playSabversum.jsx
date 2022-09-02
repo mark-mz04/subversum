@@ -3,81 +3,83 @@ import { WhiteBtn } from '../../../common/whiteBtn/whiteBtn';
 import s from './playSabversum.module.css';
 
 export const PlaySabversum = () => {
-	const firstRow = [
-		{ q: -5, s: 1, r: 0, invisible: true },
-		{ q: -4, s: 1, r: 0, invisible: false },
-		{ q: -3, s: 1, r: 0, invisible: false },
-		{ q: -2, s: 1, r: 0, invisible: false },
-		{ q: -1, s: 1, r: 0, invisible: false },
-		{ q: 0, s: 0, r: 0, invisible: false },
-		{ q: 1, s: 1, r: 0, invisible: false },
-		{ q: 2, s: 1, r: 0, invisible: false },
-		{ q: 3, s: 1, r: 0, invisible: false },
-		{ q: 4, s: 1, r: 0, invisible: false },
-		{ q: 5, s: 1, r: 0, invisible: false },
-	];
-	const secondRow = [
-		{ q: -5, s: 1, r: 0, invisible: false },
-		{ q: -4, s: 1, r: 0, invisible: true },
-		{ q: -3, s: 1, r: 0, invisible: true },
-		{ q: -2, s: 1, r: 0, invisible: true },
-		{ q: -1, s: 1, r: 0, invisible: true },
-		{ q: 0, s: 0, r: 0, invisible: true },
-		{ q: 1, s: 1, r: 0, invisible: true },
-		{ q: 2, s: 1, r: 0, invisible: true },
-		{ q: 3, s: 1, r: 0, invisible: true },
-		{ q: 4, s: 1, r: 0, invisible: true },
-	];
-	const thirdRow = [
-		{ q: -5, s: 1, r: 0, invisible: true },
-		{ q: -4, s: 1, r: 0, invisible: false },
-		{ q: -3, s: 1, r: 0, invisible: false },
-		{ q: -2, s: 1, r: 0, invisible: false },
-		{ q: -1, s: 1, r: 0, invisible: true },
-		{ q: 0, s: 0, r: 0, invisible: true },
-		{ q: 1, s: 1, r: 0, invisible: true },
-		{ q: 2, s: 1, r: 0, invisible: true },
-		{ q: 3, s: 1, r: 0, invisible: false },
-		{ q: 4, s: 1, r: 0, invisible: false },
-		{ q: 5, s: 1, r: 0, invisible: false },
-	];
-	const fourthRow = [
-		{ q: -5, s: 1, r: 0, invisible: false },
-		{ q: -4, s: 1, r: 0, invisible: false },
-		{ q: -3, s: 1, r: 0, invisible: false },
-		{ q: -2, s: 1, r: 0, invisible: false },
-		{ q: -1, s: 1, r: 0, invisible: false },
-		{ q: 0, s: 0, r: 0, invisible: false },
-		{ q: 1, s: 1, r: 0, invisible: false },
-		{ q: 2, s: 1, r: 0, invisible: false },
-		{ q: 3, s: 1, r: 0, invisible: false },
-		{ q: 4, s: 1, r: 0, invisible: false },
-	];
-	const fifthRow = [
-		{ q: -5, s: 1, r: 0, invisible: true },
-		{ q: -4, s: 1, r: 0, invisible: false },
-		{ q: -3, s: 1, r: 0, invisible: false },
-		{ q: -2, s: 1, r: 0, invisible: false },
-		{ q: -1, s: 1, r: 0, invisible: false },
-		{ q: 0, s: 0, r: 0, invisible: false },
-		{ q: 1, s: 1, r: 0, invisible: false },
-		{ q: 2, s: 1, r: 0, invisible: false },
-		{ q: 3, s: 1, r: 0, invisible: false },
-		{ q: 4, s: 1, r: 0, invisible: false },
-		{ q: 5, s: 1, r: 0, invisible: false },
-	];
-	const sixthRow = [
-		{ q: -5, s: 1, r: 0, invisible: false },
-		{ q: -4, s: 1, r: 0, invisible: false },
-		{ q: -3, s: 1, r: 0, invisible: false },
-		{ q: -2, s: 1, r: 0, invisible: false },
-		{ q: -1, s: 1, r: 0, invisible: false },
-		{ q: 0, s: 0, r: 0, invisible: false },
-		{ q: 1, s: 1, r: 0, invisible: false },
-		{ q: 2, s: 1, r: 0, invisible: false },
-		{ q: 3, s: 1, r: 0, invisible: false },
-		{ q: 4, s: 1, r: 0, invisible: false },
-	];
+	const hexGrid = {
+		firstRow: [
+			{ q: -5, s: 1, r: 0, invisible: true },
+			{ q: -4, s: 1, r: 0, invisible: false },
+			{ q: -3, s: 1, r: 0, invisible: false },
+			{ q: -2, s: 1, r: 0, invisible: false },
+			{ q: -1, s: 1, r: 0, invisible: false },
+			{ q: 0, s: 0, r: 0, invisible: false },
+			{ q: 1, s: 1, r: 0, invisible: false },
+			{ q: 2, s: 1, r: 0, invisible: false },
+			{ q: 3, s: 1, r: 0, invisible: false },
+			{ q: 4, s: 1, r: 0, invisible: false },
+			{ q: 5, s: 1, r: 0, invisible: false },
+		],
+		secondRow: [
+			{ q: -5, s: 1, r: 0, invisible: false },
+			{ q: -4, s: 1, r: 0, invisible: true },
+			{ q: -3, s: 1, r: 0, invisible: true },
+			{ q: -2, s: 1, r: 0, invisible: true },
+			{ q: -1, s: 1, r: 0, invisible: true },
+			{ q: 0, s: 0, r: 0, invisible: true },
+			{ q: 1, s: 1, r: 0, invisible: true },
+			{ q: 2, s: 1, r: 0, invisible: true },
+			{ q: 3, s: 1, r: 0, invisible: true },
+			{ q: 4, s: 1, r: 0, invisible: true },
+		],
+		thirdRow: [
+			{ q: -5, s: 1, r: 0, invisible: true },
+			{ q: -4, s: 1, r: 0, invisible: false },
+			{ q: -3, s: 1, r: 0, invisible: false },
+			{ q: -2, s: 1, r: 0, invisible: false },
+			{ q: -1, s: 1, r: 0, invisible: true },
+			{ q: 0, s: 0, r: 0, invisible: true },
+			{ q: 1, s: 1, r: 0, invisible: true },
+			{ q: 2, s: 1, r: 0, invisible: true },
+			{ q: 3, s: 1, r: 0, invisible: false },
+			{ q: 4, s: 1, r: 0, invisible: false },
+			{ q: 5, s: 1, r: 0, invisible: false },
+		],
+		fourthRow: [
+			{ q: -5, s: 1, r: 0, invisible: false },
+			{ q: -4, s: 1, r: 0, invisible: false },
+			{ q: -3, s: 1, r: 0, invisible: false },
+			{ q: -2, s: 1, r: 0, invisible: false },
+			{ q: -1, s: 1, r: 0, invisible: false },
+			{ q: 0, s: 0, r: 0, invisible: false },
+			{ q: 1, s: 1, r: 0, invisible: false },
+			{ q: 2, s: 1, r: 0, invisible: false },
+			{ q: 3, s: 1, r: 0, invisible: false },
+			{ q: 4, s: 1, r: 0, invisible: false },
+		],
+		fifthRow: [
+			{ q: -5, s: 1, r: 0, invisible: true },
+			{ q: -4, s: 1, r: 0, invisible: false },
+			{ q: -3, s: 1, r: 0, invisible: false },
+			{ q: -2, s: 1, r: 0, invisible: false },
+			{ q: -1, s: 1, r: 0, invisible: false },
+			{ q: 0, s: 0, r: 0, invisible: false },
+			{ q: 1, s: 1, r: 0, invisible: false },
+			{ q: 2, s: 1, r: 0, invisible: false },
+			{ q: 3, s: 1, r: 0, invisible: false },
+			{ q: 4, s: 1, r: 0, invisible: false },
+			{ q: 5, s: 1, r: 0, invisible: false },
+		],
+		sixthRow: [
+			{ q: -5, s: 1, r: 0, invisible: false },
+			{ q: -4, s: 1, r: 0, invisible: false },
+			{ q: -3, s: 1, r: 0, invisible: false },
+			{ q: -2, s: 1, r: 0, invisible: false },
+			{ q: -1, s: 1, r: 0, invisible: false },
+			{ q: 0, s: 0, r: 0, invisible: false },
+			{ q: 1, s: 1, r: 0, invisible: false },
+			{ q: 2, s: 1, r: 0, invisible: false },
+			{ q: 3, s: 1, r: 0, invisible: false },
+			{ q: 4, s: 1, r: 0, invisible: false },
+		],
+	};
 
 	return (
 		<section>
@@ -92,9 +94,9 @@ export const PlaySabversum = () => {
 				</div>
 			</div>
 
-			<HexTwoRows rowTop={firstRow} rowBtm={secondRow} />
-			<HexTwoRows rowTop={thirdRow} rowBtm={fourthRow} />
-			<HexTwoRows rowTop={fifthRow} rowBtm={sixthRow} />
+			<HexTwoRows rowTop={hexGrid.firstRow} rowBtm={hexGrid.secondRow} />
+			<HexTwoRows rowTop={hexGrid.thirdRow} rowBtm={hexGrid.fourthRow} />
+			<HexTwoRows rowTop={hexGrid.fifthRow} rowBtm={hexGrid.sixthRow} />
 		</section>
 	);
 };

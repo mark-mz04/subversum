@@ -221,19 +221,16 @@ export const FuturePlanet = () => {
 					textClick={'click to see more!'}
 					textMore={'To learn more!'}
 					subtitle={'Gold refinery'}
-					text={`These buildings are the housing for your workers. It is crucial to
-						have ones because good living conditions allow your workers to fully
-						concentrate on their work. Moreover, having workers' housing
-						increases their loyalty to you.`}
+					text={`These buildings are the housing for your workers. It is crucial to have ones because good living conditions allow your workers to fully concentrate on their work. Moreover, having workers' housing increases their loyalty to you.`}
 					positionTextClick={s.sevenPositionTextClick}
 					positionTextMore={s.sevenPositionTextMore}
 					positionText={s.sevenPositionText}
+					imgSrc={home}
+					positionImg={s.sevenPositionImg}
 					learnMoreState={sevenLearnMore}
 					clickTextClick={clickSevenHex}
 					clickTextMore={clickSevenLearnMore}
 				/>
-
-				<img className={s.home} src={`${home}`} />
 			</div>
 
 			<HexTwoRows rowTop={hexGrid.firstRow} rowBtm={hexGrid.secondRow} />
@@ -260,6 +257,8 @@ export const FuturePlanet = () => {
 					positionTextClick={s.threePositionTextClick}
 					positionTextMore={s.threePositionTextMore}
 					positionText={s.threePositionText}
+					imgSrc={home}
+					positionImg={s.threePositionImg}
 					learnMoreState={threeLearnMore}
 					clickTextClick={clickThreeHex}
 					clickTextMore={clickThreeLearnMore}

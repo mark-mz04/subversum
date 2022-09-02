@@ -8,6 +8,8 @@ export const ActiveHex = ({
 	positionTextClick,
 	positionTextMore,
 	positionText,
+	imgSrc,
+	positionImg,
 	learnMoreState,
 	clickTextClick,
 	clickTextMore,
@@ -36,6 +38,12 @@ export const ActiveHex = ({
 				<p className={`${s.darkText} ${positionText}`}>{text}</p>
 			) : (
 				<></>
+			)}
+
+			{learnMoreState && (
+				<div className={`${s.imgContainer} ${positionImg}`}>
+					<img className={`${s.img}`} src={`${imgSrc}`} />
+				</div>
 			)}
 		</>
 	);

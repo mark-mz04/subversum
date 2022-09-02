@@ -19,17 +19,15 @@
 	right: 23.5vw;
 }
 
-.home {
-	position: absolute;
-	right: 0;
-	z-index: 1;
-	top: -7vw;
+.sevenPositionImg {
+	top: 15vw;
+	right: 18vw;
 }
 
 .btmText {
 	position: absolute;
 	width: 40.5vw;
-	bottom: 10vw;
+	bottom: 11vw;
 	right: 11.5vw;
 }
 
@@ -46,4 +44,9 @@
 .threePositionText {
 	bottom: 3vw;
 	left: 8.5vw;
+}
+
+.threePositionImg {
+	bottom: 19vw;
+	left: 7vw;
 }

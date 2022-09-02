@@ -44,10 +44,11 @@
 	justify-content: flex-end;
 	align-items: center;
 	height: 100%;
-	width: 10.2vw;
+	width: 9.75vw;
 	top: 0;
 	left: 0;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .burgerMenu,
@@ -94,6 +95,7 @@
 .navigationItem {
 	white-space: nowrap;
 	overflow: hidden;
+	cursor: pointer;
 }
 .navigationItem + .navigationItem {
 	margin: 0 0 0 2.5vw;
@@ -114,6 +116,7 @@
 
 .userMenuLogo {
 	height: 2.5vw;
+	cursor: pointer;
 }
 
 .content {

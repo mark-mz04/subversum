@@ -46,11 +46,21 @@ export const Header = () => {
 								open &&
 								((style) => (
 									<nav style={style} className={`${s.navigation}`}>
-										<a className={s.navigationItem}>Learn</a>
-										<a className={s.navigationItem}>NFT List</a>
-										<a className={s.navigationItem}>Community</a>
-										<a className={s.navigationItem}>Key numbers</a>
-										<a className={s.navigationItem}>Events</a>
+										<a className={s.navigationItem} href='#'>
+											Learn
+										</a>
+										<a className={s.navigationItem} href='#'>
+											NFT List
+										</a>
+										<a className={s.navigationItem} href='#'>
+											Community
+										</a>
+										<a className={s.navigationItem} href='#'>
+											Key numbers
+										</a>
+										<a className={s.navigationItem} href='#'>
+											Events
+										</a>
 									</nav>
 								))
 							}
@@ -69,9 +79,15 @@ export const Header = () => {
 							open &&
 							((style) => (
 								<nav style={style} className={s.userMenu}>
-									<a className={s.navigationItem}>My NFT</a>
-									<a className={s.navigationItem}>Wallet</a>
-									<a className={s.navigationItem}>Account</a>
+									<a className={s.navigationItem} href='#'>
+										My NFT
+									</a>
+									<a className={s.navigationItem} href='#'>
+										Wallet
+									</a>
+									<a className={s.navigationItem} href='#'>
+										Account
+									</a>
 								</nav>
 							))
 						}
