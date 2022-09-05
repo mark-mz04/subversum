@@ -3,13 +3,42 @@ import userMenuLogo from '../../img/mainPage/header/userMenuLogo.svg';
 import logo from '../../img/logo.svg';
 import { WhiteBtn } from '../common/whiteBtn/whiteBtn';
 import { useRef, useState } from 'react';
-import { Transition } from 'react-spring/renderprops';
+import { useTransition, animated } from 'react-spring';
 
 export const Header = () => {
 	const menuToggle = useRef();
 
 	const [openMenu, setOpenMenu] = useState(false);
 	const [openUserMenu, setOpenUserMenu] = useState(false);
+
+	const animationMenu = useTransition(openMenu, {
+		from: {
+			width: '0vw',
+		},
+		enter: {
+			width: '53vw',
+		},
+		leave: {
+			width: '0vw',
+		},
+		config: {
+			duration: 500,
+		},
+	});
+	const animationUserMenu = useTransition(openUserMenu, {
+		from: {
+			width: '0vw',
+		},
+		enter: {
+			width: '27vw',
+		},
+		leave: {
+			width: '0vw',
+		},
+		config: {
+			duration: 500,
+		},
+	});
 
 	const handlerClickMenu = () => {
 		setOpenMenu(!openMenu);
@@ -36,46 +65,32 @@ export const Header = () => {
 							onClick={() => handlerClickMenu()}
 						/>
 						<div className={s.burgerMenu}></div>
-						<Transition
-							items={openMenu}
-							from={{ width: 0 }}
-							enter={{ width: 'auto' }}
-							leave={{ width: 0 }}
-							config={{ duration: 400 }}>
-							{(open) =>
-								open &&
-								((style) => (
-									<nav style={style} className={`${s.navigation}`}>
+						{animationMenu(
+							(style, open) =>
+								open && (
+									<animated.nav style={style} className={`${s.navigation}`}>
 										<a className={s.navigationItem}>Learn</a>
 										<a className={s.navigationItem}>NFT List</a>
 										<a className={s.navigationItem}>Community</a>
 										<a className={s.navigationItem}>Key numbers</a>
 										<a className={s.navigationItem}>Events</a>
-									</nav>
-								))
-							}
-						</Transition>
+									</animated.nav>
+								)
+						)}
 					</div>
 				</div>
 
 				<div className={s.userMenuContainer}>
-					<Transition
-						items={openUserMenu}
-						from={{ width: 0 }}
-						enter={{ width: 'auto' }}
-						leave={{ width: 0 }}
-						config={{ duration: 400 }}>
-						{(open) =>
-							open &&
-							((style) => (
-								<nav style={style} className={s.userMenu}>
+					{animationUserMenu(
+						(style, open) =>
+							open && (
+								<animated.nav style={style} className={s.userMenu}>
 									<a className={s.navigationItem}>My NFT</a>
 									<a className={s.navigationItem}>Wallet</a>
 									<a className={s.navigationItem}>Account</a>
-								</nav>
-							))
-						}
-					</Transition>
+								</animated.nav>
+							)
+					)}
 
 					<img
 						src={`${userMenuLogo}`}
